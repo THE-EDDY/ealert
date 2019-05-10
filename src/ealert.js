@@ -4,55 +4,61 @@
   * Licensed under MIT
   */
 
-var ealert = new function() {
+let ealert = new function() {
 
-    this.class_name = 'ealert';
-    this.position = 'bottom left';
-    this.container_class_name = 'ealert_container';
+    // fixed
+    let class_name = 'ealert',
+        id = 'ealert-'+Math.floor((Math.random() * 100) + Math.random()),
+        container_class_name = 'ealert_container';
+
+    //customizable
+    this.position = 'bottom';
     this.duration = 3000;
-    this.id = 'ealert-'+Math.floor((Math.random() * 100) + Math.random());
 
+    // fire function
     this.fire = function (type, message) {
 
-        this.main_class = this.class_name +" "+type;
+        let main_class = class_name +" "+type;
 
         // container
-        var div = document.createElement("div");
-        div.setAttribute('class', this.container_class_name);
+        let div = document.createElement("div");
+        div.setAttribute('class', container_class_name);
 
 
         document.body.appendChild(div);
 
         // alert div
-        var alert_div = document.createElement("div");
-        alert_div.setAttribute('class', this.main_class +" "+this.position);
-        alert_div.id = this.id;
+        let alert_div = document.createElement("div");
+        alert_div.setAttribute('class', main_class +" "+this.position);
+        alert_div.id = id;
 
         div.append(alert_div);
 
         // icon
-        var icon_div = document.createElement("div");
+        let icon_div = document.createElement("div");
         icon_div.setAttribute('class', 'icon');
 
         alert_div.append(icon_div);
 
         // message
-        var message_div = document.createElement("div");
+        let message_div = document.createElement("div");
         message_div.setAttribute('class', 'message');
         message_div.innerHTML = message;
 
         alert_div.append(message_div);
 
+
+        // slide-out alert
         setTimeout(function(){
 
 
-                alert_div.classList.add('ealert_hide');
+            alert_div.classList.add('ealert_hide');
 
-
+            // destroy alert
             setTimeout(function(){
                 document.body.removeChild(div);
             }, 1000);
 
-            }, this.duration);
+        }, this.duration);
     };
 };
