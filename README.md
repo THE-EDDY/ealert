@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Logo" src="" width="300">
+    <img alt="Logo" src="https://github.com/THE-EDDY/ealert/blob/master/assets/logo.png" width="300">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@ A beautiful alternative to Javascript's Alert.
 Perfect for background activity notifications and any other notification in your application. 
 </p>
 <p align="center">
-  <img alt="Sample alert" src="">
+  <img alt="Sample alert" src="https://github.com/THE-EDDY/ealert/blob/master/assets/ealert.gif">
 </p>
 
 ### Getting Started
