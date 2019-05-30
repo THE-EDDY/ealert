@@ -14,6 +14,7 @@ let ealert = new function() {
     //customizable
     this.position = 'bottom';
     this.duration = 3000;
+    this.appearance = 'default'; // default, modern
 
     // fire function
     this.fire = function (type, message) {
@@ -29,7 +30,7 @@ let ealert = new function() {
 
         // alert div
         let alert_div = document.createElement("div");
-        alert_div.setAttribute('class', main_class +" "+this.position);
+        alert_div.setAttribute('class', main_class +" "+ this.appearance +" "+this.position);
         alert_div.id = id;
 
         div.append(alert_div);

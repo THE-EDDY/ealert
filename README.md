@@ -16,7 +16,7 @@ Download eAlert zipped file. Main files are found in the "src" folder.
 
 ### Prerequisites
 
-Your application must have [jQuery](https://jquery.com). 
+Your application must have [jQuery](https://jquery.com). A jquery.js file can be found in the jquery folder.
 
 
 ### Installing
@@ -51,6 +51,15 @@ ealert.fire('danger','This is my alert message');
 ```
 
 ### Customization
+
+##### Change appearance
+
+There are currently two(2) themes you can choose from; Default & Modern.
+The default theme is selected if no appearance customization is set.
+
+```
+ealert.appearance = 'modern'
+```
 
 ##### Change display duration
 
