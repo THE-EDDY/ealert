@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../src/ealert.min.css">
+    <script src="../jquery/jquery.js"></script>
+    <script src="../src/ealert.min.js"></script>
+</head>
+<body>
+
+<style>
+    *
+    {
+        font-family: sans-serif;
+    }
+    button
+    {
+        -webkit-appearance: none;
+        padding: 10px 20px;
+        background: dodgerblue;
+        border:none;
+        border-radius: 5px;
+        color:white;
+        text-transform: uppercase;
+    }
+    button:hover
+    {
+        background: #1b77ff;
+        cursor: pointer;
+    }
+</style>
+
+<h4>Default</h4>
+
+    <button onclick="ealert.appearance = 'default';ealert.fire('info','Hello world. This is a sample alert!');">Info alert</button>
+<button onclick="ealert.appearance = 'default';ealert.fire('success','Hello world. This is a sample alert!');">Success alert</button>
+<button onclick="ealert.appearance = 'default';ealert.fire('error','Hello world. This is a sample alert!');">Error alert</button>
+
+
+<h4>Modern</h4>
+<button onclick="ealert.appearance = 'modern';ealert.fire('info','Hello world. This is a sample alert!');">Info alert</button>
+<button onclick="ealert.appearance = 'modern';ealert.fire('success','Hello world. This is a sample alert!');">Success alert</button>
+<button onclick="ealert.appearance = 'modern'; ealert.fire('error','Hello world. This is a sample alert!');">Error alert</button>
+
+<div class="ealert_container">
+    dd
+</div>
+
+<script>
+    // set eAlert options
+    ealert.position = 'top right';
+
+
+    var type = 'info';
+
+</script>
+
+</body>
+</html>
